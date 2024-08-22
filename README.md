@@ -11,7 +11,7 @@ git clone https://github.com/abhi02-90/vehicle.git
 ```
 Step 2:
 
-Rename .env.example to .env
+`Rename .env.example to .env`
 
 Step 3:
 

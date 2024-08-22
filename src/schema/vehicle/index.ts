@@ -23,10 +23,10 @@ import xmlToJson from "../../utils/xmlToJson";
  */
 const limiter = new Bottleneck({
   reservoir: 200,
-  reservoirRefreshAmount: 250,
+  reservoirRefreshAmount: 200,
   reservoirRefreshInterval: 1000, 
   maxConcurrent: 2000,
-  minTime: 50,
+  minTime: 90,
 });
 
 export const saveVehicleTypes = async (makeDetails: IVehicleMakeJsonValue): Promise<boolean> => {
