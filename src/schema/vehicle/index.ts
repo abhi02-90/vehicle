@@ -24,7 +24,7 @@ import xmlToJson from "../../utils/xmlToJson";
 const limiter = new Bottleneck({
   reservoir: 200,
   reservoirRefreshAmount: 200,
-  reservoirRefreshInterval: 1000, 
+  reservoirRefreshInterval: 750, 
   maxConcurrent: 2000,
   minTime: 90,
 });
@@ -66,7 +66,7 @@ export const saveVehicleTypes = async (makeDetails: IVehicleMakeJsonValue): Prom
 
 const query = {
   vehicles: {
-    type: GraphQLList(VehicleType),
+    type: new GraphQLList(VehicleType),
     resolve: async () => {
       try {
         const vehicles = await getVehicles();
