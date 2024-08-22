@@ -6,11 +6,11 @@ GraphQL api for fetching xml data of vehicle make and type from public endpoint 
 
 Step 1:
 
-git clone https://
+```
+git clone https://github.com/abhi02-90/vehicle.git
+```
 
 Step 2:
-
-Run selected service from Marvel
 
 ```
 sudo docker-compose up -d
@@ -27,7 +27,7 @@ npm run test
 
 ### GraphQL
 
-GraphiQL - http://localhost:3000/
+GraphiQL - `http://localhost:3000/`
 
 
 ### GraphQL query
@@ -42,3 +42,5 @@ query {
           }
         }
      }
+     
+
