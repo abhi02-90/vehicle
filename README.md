@@ -16,7 +16,7 @@ Step 2:
 Step 3:
 
 ```
-sudo docker-compose up -d
+sudo docker compose up -d
 ```
 ### Unit Test
 
