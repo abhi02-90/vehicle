@@ -1,10 +1,4 @@
 FROM node:alpine
-WORKDIR /usr/src/app
-COPY package.json .
-RUN npm i
-COPY . .
-
-FROM node:alpine
 
 RUN mkdir -p /usr/src/node-app && chown -R node:node /usr/src/node-app
 
@@ -14,7 +8,7 @@ COPY package.json ./
 
 USER node
 
-RUN npm install
+RUN npm install --quiet && npm audit fix --quiet
 
 COPY --chown=node:node . .
 
