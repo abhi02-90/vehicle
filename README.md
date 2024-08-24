@@ -48,7 +48,8 @@ GraphiQL - `http://localhost:3000/`
 
 ### Github CI Workflow
 
-For checking github CI job, check github->actions tab 
-.github/workflow/ci.yml
+`For checking github CI job, check github -> actions tab` 
+
+`.github/workflow/ci.yml`
      
 
