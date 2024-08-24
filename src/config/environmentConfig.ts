@@ -13,7 +13,7 @@ export const environmentConfig = Object.freeze({
     ENVIRONMENT: process.env.NODE_ENV,
   },
   DB: {
-    CONNECTION_STRING: process.env.MONGODB_URI,
+    CONNECTION_STRING: process.env.MONGODB_URI || "mongodb://mongodb:27017/vehicleDB",
   },
   VEHICLE_API: {
     URL: process.env.VEHICLE_API_BASE_URL,
