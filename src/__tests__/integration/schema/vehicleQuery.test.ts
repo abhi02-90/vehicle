@@ -1,4 +1,5 @@
 import request from 'supertest';
+import { VehicleModel } from "../../../models/vehicle";
 import app from "../../../";
 
 describe('Vehicle GraphQL API', () => {
@@ -15,7 +16,21 @@ describe('Vehicle GraphQL API', () => {
           }
         }
       `;
-  
+    
+      const vehicleDocument = [{
+        _id: '5dbff32e367a343830cd2f49',
+        makeId: 12858,
+        makeName: "#1 Alpine Customs",
+        vehicleTypes: [
+            {
+                typeId: 21,
+                typeName: "Trailer"
+            }
+        ]
+      }];
+      
+      jest.spyOn(VehicleModel,  "find").mockResolvedValue(vehicleDocument);
+
       const response = await request(app)
         .post('/graphql')
         .send({ query });
