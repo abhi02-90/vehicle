@@ -25,6 +25,12 @@ Test using Jest
 For running available test, execute:
 
 ```
+sudo docker exec -it <app-container-id> sh
+```
+
+then
+
+```
 npm run test
 ```
 
