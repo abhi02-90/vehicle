@@ -6,6 +6,8 @@ WORKDIR /usr/src/node-app
 
 COPY package.json ./
 
+RUN npm install -g nodemon
+
 USER node
 
 RUN npm install --quiet && npm audit fix --quiet
