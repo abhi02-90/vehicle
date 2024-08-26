@@ -6,12 +6,15 @@ WORKDIR /usr/src/node-app
 
 COPY package.json ./
 
-RUN npm install -g nodemon
-
 USER node
 
-RUN npm install --quiet && npm audit fix --quiet
+RUN npm install ----production=false --quiet && npm audit fix --quiet
 
 COPY --chown=node:node . .
+
+# TODO: remove this step to use appropriate config for prod env
+USER root
+
+RUN npm install -g nodemon
 
 EXPOSE 3000
